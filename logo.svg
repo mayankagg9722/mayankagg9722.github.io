@@ -1,0 +1,15 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#818cf8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a78bfa;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Background circle with subtle gradient -->
+  <circle cx="32" cy="32" r="30" fill="#0f172a" stroke="url(#grad1)" stroke-width="1.5"/>
+  <!-- M letter -->
+  <path d="M18 42V22L26 32L32 24L38 32L46 22V42H42V30L36 38L32 32L28 38L22 30V42H18Z" fill="url(#grad1)"/>
+  <!-- A letter - subtle underline accent -->
+  <line x1="34" y1="40" x2="46" y2="40" stroke="url(#grad1)" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+</svg>
