@@ -60,11 +60,12 @@ const NavbarPro = () => {
           <motion.a
             href="#home"
             onClick={(e) => handleLinkClick(e, '#home')}
-            className="text-xl font-bold text-white tracking-tight"
+            className="flex items-center gap-3"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
-            MAYANK AGGARWAL
+            <img src="/logo.svg" alt="M" className="w-10 h-10" />
+            <span className="text-xl font-bold text-white tracking-tight hidden sm:block">MAYANK AGGARWAL</span>
           </motion.a>
 
           {/* Desktop Navigation */}
