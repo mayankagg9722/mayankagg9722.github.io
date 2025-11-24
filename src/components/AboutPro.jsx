@@ -41,12 +41,12 @@ const AboutPro = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 text-white">
             About <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Me</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-base md:text-lg lg:text-xl text-gray-400 max-w-3xl mx-auto">
             Building scalable systems that power modern enterprises
           </p>
         </motion.div>
@@ -64,7 +64,7 @@ const AboutPro = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-3xl blur-2xl opacity-30 group-hover:opacity-50 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
               
               {/* Photo container */}
-              <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-3xl overflow-hidden border-2 border-dark-600/50 shadow-2xl">
+              <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-2xl md:rounded-3xl overflow-hidden border-2 border-dark-600/50 shadow-2xl">
                 {/* Theme-aligned filter overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-transparent mix-blend-overlay z-10"></div>
                 
@@ -85,9 +85,9 @@ const AboutPro = () => {
                 <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-dark-900/80 to-transparent z-10"></div>
                 
                 {/* Name label */}
-                <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
-                  <h3 className="text-2xl font-bold text-white text-center">Mayank Aggarwal</h3>
-                  <p className="text-sm text-gray-300 text-center mt-1">Senior Software Engineer @ Microsoft</p>
+                <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 md:p-6 z-20">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white text-center">Mayank Aggarwal</h3>
+                  <p className="text-xs sm:text-sm text-gray-300 text-center mt-1">Senior Software Engineer @ Microsoft</p>
                 </div>
               </div>
             </div>
@@ -95,22 +95,22 @@ const AboutPro = () => {
 
           {/* Microsoft Developer Card - Hero */}
           <motion.div variants={itemVariants} className="relative">
-            <div className="relative p-8 md:p-12 rounded-3xl bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 backdrop-blur-sm border border-dark-600/50 overflow-hidden">
+            <div className="relative p-5 sm:p-6 md:p-8 lg:p-12 rounded-2xl md:rounded-3xl bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 backdrop-blur-sm border border-dark-600/50 overflow-hidden">
               {/* Accent gradient */}
               <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl" />
               
               <div className="relative z-10">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="p-3 rounded-xl bg-blue-500/20 backdrop-blur-sm">
-                    <Briefcase className="w-6 h-6 text-blue-400" />
+                <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-5 md:mb-6">
+                  <div className="p-2 sm:p-2.5 md:p-3 rounded-lg md:rounded-xl bg-blue-500/20 backdrop-blur-sm">
+                    <Briefcase className="w-5 h-5 md:w-6 md:h-6 text-blue-400" />
                   </div>
                   <div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-white">Microsoft Developer</h3>
-                    <p className="text-blue-400 font-medium">Senior Software Engineer at Microsoft Azure</p>
+                    <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white">Microsoft Developer</h3>
+                    <p className="text-sm md:text-base text-blue-400 font-medium">Senior Software Engineer at Microsoft Azure</p>
                   </div>
                 </div>
                 
-                <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed mb-4 sm:mb-5 md:mb-6">
                   With <span className="text-white font-semibold">6+ years of industry experience</span>, I develop critical{' '}
                   <span className="text-white font-semibold">enterprise resiliency applications on Azure</span>, providing reliability 
                   to cloud workloads and business-critical workloads like{' '}
@@ -144,19 +144,19 @@ const AboutPro = () => {
 
           {/* Podcast Section */}
           <motion.div variants={itemVariants} className="relative">
-            <div className="relative p-8 md:p-12 rounded-3xl bg-gradient-to-br from-pink-500/10 via-red-500/10 to-orange-500/10 backdrop-blur-sm border border-dark-600/50 overflow-hidden">
+            <div className="relative p-5 sm:p-6 md:p-8 lg:p-12 rounded-2xl md:rounded-3xl bg-gradient-to-br from-pink-500/10 via-red-500/10 to-orange-500/10 backdrop-blur-sm border border-dark-600/50 overflow-hidden">
               {/* Accent gradient */}
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-pink-500/20 rounded-full blur-3xl" />
               
               <div className="relative z-10">
-                <div className="flex items-start justify-between flex-wrap gap-4 mb-6">
-                  <div className="flex items-center gap-3">
-                    <div className="p-3 rounded-xl bg-red-500/20 backdrop-blur-sm">
-                      <Mic className="w-6 h-6 text-red-400" />
+                <div className="flex items-start justify-between flex-wrap gap-4 mb-4 sm:mb-5 md:mb-6">
+                  <div className="flex items-center gap-2 sm:gap-3">
+                    <div className="p-2 sm:p-2.5 md:p-3 rounded-lg md:rounded-xl bg-red-500/20 backdrop-blur-sm">
+                      <Mic className="w-5 h-5 md:w-6 md:h-6 text-red-400" />
                     </div>
                     <div>
-                      <h3 className="text-2xl md:text-3xl font-bold text-white">Beyond Code</h3>
-                      <p className="text-red-400 font-medium">Co-Host of The Openers Podcast</p>
+                      <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white">Beyond Code</h3>
+                      <p className="text-sm md:text-base text-red-400 font-medium">Co-Host of The Openers Podcast</p>
                     </div>
                   </div>
                   
@@ -166,39 +166,26 @@ const AboutPro = () => {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-red-600 hover:bg-red-700 text-white rounded-full font-semibold transition-colors shadow-lg"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 bg-red-600 hover:bg-red-700 text-white rounded-full text-sm sm:text-base font-semibold transition-colors shadow-lg"
                   >
-                    <Youtube className="w-5 h-5" />
+                    <Youtube className="w-4 h-4 sm:w-5 sm:h-5" />
                     Watch on YouTube
                   </motion.a>
                 </div>
 
-                <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed mb-4 sm:mb-5 md:mb-6">
                   <span className="text-white font-semibold">The Openers</span> is a platform started to give people from all walks of life 
                   more clarity on what any profession entails, helping them make calculated decisions in their education and corporate journeys.
                 </p>
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white flex items-center gap-2">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="p-4 rounded-xl bg-dark-800/60 backdrop-blur-sm border border-dark-700/50">
+                    <div className="flex items-center gap-2 mb-2">
                       <span className="w-2 h-2 bg-red-400 rounded-full"></span>
-                      Our Mission
-                    </h4>
-                    <p className="text-gray-400 leading-relaxed">
-                      Each episode features professionals who provide meaningful insights into how they achieved their milestones, 
-                      offering guidance to those navigating their career paths.
-                    </p>
-                  </div>
-                  
-                  <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white flex items-center gap-2">
-                      <span className="w-2 h-2 bg-orange-400 rounded-full"></span>
-                      Hosted By
-                    </h4>
-                    <p className="text-gray-400 leading-relaxed">
-                      Bringing professionals 
-                      from all industries to share their journey.
-                    </p>
+                      <span className="text-sm font-semibold text-red-400">Our Mission</span>
+                    </div>
+                    <p className="text-gray-300 font-medium">Each episode features professionals who provide meaningful insights</p>
+                    <p className="text-sm text-gray-500 mt-1">Offering guidance to those navigating their career paths</p>
                   </div>
                 </div>
               </div>

@@ -73,15 +73,12 @@ const ExperiencePro = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-sm font-semibold text-gray-500 mb-4 tracking-wider uppercase">
-            Experience
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 text-white">
+            Professional <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Journey</span>
           </h2>
-          <h3 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Professional Journey
-          </h3>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-base md:text-lg lg:text-xl text-gray-400 max-w-3xl mx-auto">
             6+ years building enterprise-grade solutions at scale
           </p>
         </motion.div>
@@ -93,20 +90,20 @@ const ExperiencePro = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mb-12"
         >
-          <div className="relative p-8 md:p-12 rounded-3xl bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 backdrop-blur-sm border border-dark-600/50 overflow-hidden">
+          <div className="relative p-5 sm:p-6 md:p-8 lg:p-12 rounded-2xl md:rounded-3xl bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 backdrop-blur-sm border border-dark-600/50 overflow-hidden">
             {/* Accent gradient */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
             
             <div className="relative z-10">
               {/* Company Header */}
-              <div className="flex items-start justify-between mb-8 flex-wrap gap-4">
-                <div className="flex items-center gap-4">
-                  <div className="p-4 rounded-2xl bg-blue-500/20 backdrop-blur-sm">
-                    <Briefcase className="w-8 h-8 text-blue-400" />
+              <div className="flex items-start justify-between mb-6 md:mb-8 flex-wrap gap-3 md:gap-4">
+                <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
+                  <div className="p-2 sm:p-2.5 md:p-3 rounded-lg md:rounded-xl bg-blue-500/20 backdrop-blur-sm">
+                    <Briefcase className="w-5 h-5 md:w-6 md:h-6 text-blue-400" />
                   </div>
                   <div>
-                    <h3 className="text-3xl md:text-4xl font-bold text-white">Microsoft</h3>
-                    <p className="text-blue-400 font-medium text-lg">Azure Cloud Services</p>
+                    <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white">Microsoft</h3>
+                    <p className="text-sm md:text-base text-blue-400 font-medium">Azure Cloud Services</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-dark-800/60 backdrop-blur-sm border border-dark-700/50">
@@ -132,7 +129,7 @@ const ExperiencePro = () => {
                       {/* Role Header */}
                       <div className="flex items-start justify-between mb-3 flex-wrap gap-2">
                         <div>
-                          <h4 className="text-xl md:text-2xl font-bold text-white mb-1">
+                          <h4 className="text-base sm:text-lg md:text-xl font-bold text-white mb-1">
                             {role.link ? (
                               <a 
                                 href={role.link} 
@@ -146,13 +143,13 @@ const ExperiencePro = () => {
                               role.title
                             )}
                           </h4>
-                          <p className="text-blue-400 font-medium">{role.focus}</p>
+                          <p className="text-sm md:text-base text-blue-400 font-medium">{role.focus}</p>
                         </div>
-                        <span className="text-sm text-gray-500 font-medium">{role.period}</span>
+                        <span className="text-xs sm:text-sm text-gray-500 font-medium">{role.period}</span>
                       </div>
 
                       {/* Description */}
-                      <p className="text-gray-300 leading-relaxed mb-4">
+                      <p className="text-sm sm:text-base text-gray-300 leading-relaxed mb-4">
                         {role.description}
                       </p>
 
@@ -191,15 +188,15 @@ const ExperiencePro = () => {
                       <Award className="w-6 h-6 text-green-400" />
                     </div>
                   </div>
-                  <h4 className="text-2xl font-bold text-white mb-2">
+                  <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2">
                     {otherExperience.role}
                   </h4>
-                  <p className="text-lg text-green-400 mb-2 font-medium">{otherExperience.company}</p>
-                  <p className="text-sm text-gray-500">{otherExperience.period}</p>
+                  <p className="text-sm md:text-base text-green-400 mb-2 font-medium">{otherExperience.company}</p>
+                  <p className="text-xs sm:text-sm text-gray-500">{otherExperience.period}</p>
                 </div>
 
                 <div className="md:col-span-2 space-y-4">
-                  <p className="text-gray-300 leading-relaxed">
+                  <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
                     {otherExperience.description}
                   </p>
                   <div className="space-y-2">

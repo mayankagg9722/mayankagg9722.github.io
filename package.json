@@ -9,7 +9,6 @@
     "build": "vite build",
     "resume": "powershell -ExecutionPolicy Bypass -File ./resume/build-resume.ps1",
     "preview": "vite preview",
-    "predeploy": "npm run build",
     "deploy": "npm run resume && npm run build && gh-pages -d dist"
   },
   "dependencies": {

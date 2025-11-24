@@ -60,15 +60,12 @@ const SkillsPro = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-sm font-semibold text-gray-500 mb-4 tracking-wider uppercase">
-            Expertise
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 text-white">
+            Technology <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Stack</span>
           </h2>
-          <h3 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Technology Stack
-          </h3>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-base md:text-lg lg:text-xl text-gray-400 max-w-3xl mx-auto">
             Not limited by tools-adaptable across the full stack to solve complex problems
           </p>
         </motion.div>
@@ -84,19 +81,19 @@ const SkillsPro = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group relative"
               >
-                <div className="h-full p-6 rounded-2xl bg-dark-900/60 backdrop-blur-sm border border-dark-700/50 hover:border-dark-600/50 transition-all">
+                <div className="h-full p-5 sm:p-6 md:p-8 rounded-2xl md:rounded-3xl bg-dark-900/60 backdrop-blur-sm border border-dark-700/50 hover:border-dark-600/50 transition-all">
                   {/* Icon */}
-                  <div className={`inline-flex p-3 rounded-xl bg-gradient-to-br ${category.color} bg-opacity-10 mb-4`}>
-                    <Icon className="w-6 h-6 text-white" />
+                  <div className={`inline-flex p-2 sm:p-2.5 md:p-3 rounded-lg md:rounded-xl bg-gradient-to-br ${category.color} bg-opacity-10 mb-4 md:mb-6`}>
+                    <Icon className="w-5 h-5 md:w-6 md:h-6 text-white" />
                   </div>
                   
                   {/* Title */}
-                  <h4 className="text-xl font-semibold text-white mb-3">
+                  <h4 className="text-base sm:text-lg md:text-xl font-bold text-white mb-2 md:mb-3">
                     {category.title}
                   </h4>
                   
                   {/* Description */}
-                  <p className="text-gray-400 leading-relaxed">
+                  <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
                     {category.description}
                   </p>
 
@@ -115,7 +112,7 @@ const SkillsPro = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="mt-16 text-center"
         >
-          <p className="text-lg text-gray-400 max-w-4xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg text-gray-400 max-w-4xl mx-auto leading-relaxed">
             Experienced in working across the entire technology stack - from infrastructure and backend systems 
             to frontend interfaces and security implementations. Quick to learn new tools and frameworks as needed.
           </p>

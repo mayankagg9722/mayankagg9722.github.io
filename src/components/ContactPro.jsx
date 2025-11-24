@@ -59,15 +59,12 @@ const ContactPro = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6 }}
-            className="mb-16"
+            className="mb-12 md:mb-16"
           >
-            <h2 className="text-sm font-semibold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-6 tracking-wider uppercase">
-              Get in touch
-            </h2>
-            <h3 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 md:mb-8 leading-tight">
               Let's build something <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">together!</span>
-            </h3>
-            <p className="text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto">
+            </h2>
+            <p className="text-base md:text-lg lg:text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto">
               Always open to discussing new projects, creative ideas, 
               or opportunities to be part of your vision.
             </p>
@@ -92,22 +89,22 @@ const ContactPro = () => {
                   transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                   whileHover={{ scale: 1.03, y: -5 }}
                   whileTap={{ scale: 0.98 }}
-                  className={`relative p-8 rounded-2xl bg-gradient-to-br ${method.gradient} backdrop-blur-sm border border-dark-600/50 text-left group overflow-hidden transition-all duration-300`}
+                  className={`relative p-5 sm:p-6 md:p-8 rounded-xl md:rounded-2xl bg-gradient-to-br ${method.gradient} backdrop-blur-sm border border-dark-600/50 text-left group overflow-hidden transition-all duration-300`}
                 >
                   {/* Hover glow effect */}
                   <div className="absolute inset-0 bg-gradient-to-br from-white/0 to-white/0 group-hover:from-white/5 group-hover:to-white/0 transition-all duration-300"></div>
                   
                   <div className="relative z-10 flex items-center justify-between">
-                    <div className="flex items-center gap-5">
-                      <div className={`p-4 ${method.iconBg} rounded-2xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg`}>
-                        <Icon className={`w-8 h-8 ${method.iconColor} ${method.iconHoverColor} transition-colors duration-300`} strokeWidth={2} />
+                    <div className="flex items-center gap-3 sm:gap-4">
+                      <div className={`p-2 sm:p-2.5 md:p-3 ${method.iconBg} rounded-lg md:rounded-xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg`}>
+                        <Icon className={`w-5 h-5 md:w-6 md:h-6 ${method.iconColor} ${method.iconHoverColor} transition-colors duration-300`} strokeWidth={2} />
                       </div>
                       <div className="flex-1">
-                        <h4 className="text-white text-xl font-bold mb-1">{method.label}</h4>
-                        <p className="text-gray-400 text-base group-hover:text-gray-300 transition-colors">{method.value}</p>
+                        <h4 className="text-white text-sm sm:text-base md:text-lg font-bold mb-1">{method.label}</h4>
+                        <p className="text-xs sm:text-sm text-gray-400 group-hover:text-gray-300 transition-colors">{method.value}</p>
                       </div>
                     </div>
-                    <ExternalLink className="w-6 h-6 text-gray-500 group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300 flex-shrink-0" strokeWidth={2} />
+                    <ExternalLink className="w-5 h-5 text-gray-500 group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300 flex-shrink-0" strokeWidth={2} />
                   </div>
                 </motion.a>
               );
@@ -127,9 +124,9 @@ const ContactPro = () => {
               href="mailto:mayankagg9722@gmail.com"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="relative inline-flex items-center justify-center gap-3 px-12 py-5 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white rounded-full text-lg font-bold shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 group"
+              className="relative inline-flex items-center justify-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-3.5 md:px-10 md:py-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white rounded-full text-sm sm:text-base md:text-lg font-bold shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 group"
             >
-              <Mail className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" strokeWidth={2} />
+              <Mail className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-12 transition-transform duration-300" strokeWidth={2} />
               Send me an email
             </motion.a>
           </motion.div>

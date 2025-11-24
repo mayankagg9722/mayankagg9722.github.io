@@ -49,7 +49,7 @@ const HeroPro = () => {
   };
 
   return (
-    <section id="home" className="min-h-[85vh] md:min-h-screen flex items-center justify-center relative overflow-hidden py-8 md:py-12">
+    <section id="home" className="min-h-[70vh] md:min-h-[80vh] flex items-center justify-center relative overflow-hidden py-12 md:py-16">
       {/* Enhanced gradient background with radial effect */}
       <div className="absolute inset-0 bg-gradient-to-br from-dark-800 via-dark-900 to-black" />
       
@@ -111,12 +111,12 @@ const HeroPro = () => {
           className="max-w-6xl mx-auto text-center"
         >
           {/* Introduction */}
-          <motion.div variants={itemVariants} className="mb-6">
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-500 font-light tracking-wide">
+          <motion.div variants={itemVariants} className="mb-4 md:mb-6">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-500 font-light tracking-wide">
               Hi, I'm{' '}
               <span className="relative inline-block">
-                <span className="relative z-10 bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-                  Mayank Aggarwal
+                <span className="relative z-10 bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
+                  Mayank
                 </span>
                 <motion.span
                   className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 via-purple-400 to-purple-500"
@@ -131,12 +131,12 @@ const HeroPro = () => {
           {/* Main headline with enhanced typography */}
           <motion.h1
             variants={itemVariants}
-            className="font-bold leading-[1.1] mb-6 tracking-tight"
+            className="font-bold leading-[1.1] mb-4 md:mb-6 tracking-tight"
           >
-            <span className="block text-white mb-3 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+            <span className="block text-white mb-2 md:mb-3 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
               Building Reliable Systems
             </span>
-            <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+            <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
               <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-purple-500 bg-clip-text text-transparent font-extrabold">
                 Delivering Real Impact
               </span>
@@ -146,7 +146,7 @@ const HeroPro = () => {
           {/* Enhanced subheading */}
           <motion.p
             variants={itemVariants}
-            className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-400 mb-14 max-w-4xl mx-auto leading-relaxed font-light"
+            className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-400 mb-10 sm:mb-12 md:mb-14 max-w-4xl mx-auto leading-relaxed font-light"
           >
             Full-stack engineer architecting{' '}
             <span className="text-white font-semibold relative inline-block group">
@@ -164,7 +164,7 @@ const HeroPro = () => {
           {/* Enhanced CTA Buttons */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-wrap gap-5 justify-center"
+            className="flex flex-wrap gap-3 md:gap-5 justify-center"
           >
             <motion.button
               onClick={() => {
@@ -173,10 +173,10 @@ const HeroPro = () => {
               }}
               whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(255,255,255,0.1)" }}
               whileTap={{ scale: 0.95 }}
-              className="group relative px-8 py-4 bg-white text-black rounded-full font-semibold text-lg flex items-center gap-2 overflow-hidden shadow-xl"
+              className="group relative px-6 py-3 md:px-8 md:py-4 bg-white text-black rounded-full font-semibold text-base md:text-lg flex items-center gap-2 overflow-hidden shadow-xl"
             >
               <span className="relative z-10">View work</span>
-              <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 md:w-5 md:h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
               <motion.div
                 className="absolute inset-0 bg-gradient-to-r from-gray-100 to-white"
                 initial={{ x: "-100%" }}
@@ -193,9 +193,9 @@ const HeroPro = () => {
                 borderColor: "rgba(255,255,255,0.3)",
               }}
               whileTap={{ scale: 0.95 }}
-              className="relative px-8 py-4 bg-dark-800/40 backdrop-blur-sm text-white rounded-full font-semibold text-lg border border-dark-600/50 hover:bg-dark-700/60 transition-all shadow-lg overflow-hidden group flex items-center gap-2"
+              className="relative px-6 py-3 md:px-8 md:py-4 bg-dark-800/40 backdrop-blur-sm text-white rounded-full font-semibold text-base md:text-lg border border-dark-600/50 hover:bg-dark-700/60 transition-all shadow-lg overflow-hidden group flex items-center gap-2"
             >
-              <Download className="w-5 h-5 relative z-10" />
+              <Download className="w-4 h-4 md:w-5 md:h-5 relative z-10" />
               <span className="relative z-10">Resume</span>
               <motion.div
                 className="absolute inset-0 bg-gradient-to-r from-dark-700/50 to-dark-600/50"

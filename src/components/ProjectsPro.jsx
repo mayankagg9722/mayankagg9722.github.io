@@ -112,13 +112,10 @@ const ProjectsPro = () => {
             animate={isInView ? "visible" : "hidden"}
             className="text-center mb-16"
           >
-            <h2 className="text-sm font-semibold text-gray-500 mb-4 tracking-wider uppercase">
-              Selected Work
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 text-white">
+              Projects That <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Solve Real Problems</span>
             </h2>
-            <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-              Projects That Solve Real Problems
-            </h3>
-            <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-base md:text-lg lg:text-xl text-gray-400 max-w-3xl mx-auto">
               Enterprise-scale systems impacting millions of users
             </p>
           </motion.div>
@@ -150,10 +147,10 @@ const ProjectsPro = () => {
                             <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                           </div>
                           <div className="min-w-0">
-                            <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-2">
+                            <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2">
                               {project.title}
                             </h4>
-                            <p className="text-sm sm:text-base text-gray-400">{project.subtitle}</p>
+                            <p className="text-xs sm:text-sm md:text-base text-gray-400">{project.subtitle}</p>
                           </div>
                         </div>
                         <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
@@ -172,7 +169,7 @@ const ProjectsPro = () => {
                         </div>
                       </div>
 
-                      <p className="text-sm sm:text-base text-gray-300 mb-6 sm:mb-8 leading-relaxed max-w-4xl">
+                      <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-6 sm:mb-8 leading-relaxed max-w-4xl">
                         {project.description}
                       </p>
 
@@ -212,7 +209,7 @@ const ProjectsPro = () => {
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
           >
-            <h4 className="text-xl sm:text-2xl font-bold text-white mb-6">Other Notable Projects</h4>
+            <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-6">Other Notable Projects</h4>
             <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
               {otherProjects.map((project) => {
                 const Icon = project.icon;
@@ -229,11 +226,11 @@ const ProjectsPro = () => {
                         <div className="flex-1 min-w-0">
                           <div className="flex items-start justify-between gap-2">
                             <div className="flex-1 min-w-0">
-                              <h5 className="text-lg sm:text-xl font-bold text-white mb-1">
+                              <h5 className="text-base sm:text-lg font-bold text-white mb-1">
                                 {project.title}
                               </h5>
                               <p className="text-xs sm:text-sm text-gray-400 mb-2">{project.subtitle}</p>
-                              <p className="text-xs sm:text-sm text-gray-500">{project.description}</p>
+                              <p className="text-xs sm:text-sm md:text-base text-gray-500">{project.description}</p>
                             </div>
                             {project.link && (
                               <a

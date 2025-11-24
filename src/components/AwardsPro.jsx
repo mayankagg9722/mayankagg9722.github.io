@@ -93,15 +93,12 @@ const AwardsPro = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-sm font-semibold text-gray-500 mb-4 tracking-wider uppercase">
-            Awards & Recognition
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 text-white">
+            Achievements That <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Matter</span>
           </h2>
-          <h3 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Achievements That Matter
-          </h3>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-base md:text-lg lg:text-xl text-gray-400 max-w-3xl mx-auto">
             Recognition from industry leaders and global competitions
           </p>
         </motion.div>
@@ -118,30 +115,33 @@ const AwardsPro = () => {
                 transition={{ duration: 0.6, delay: index * 0.15 }}
                 className="group relative"
               >
-                <div className="h-full p-8 rounded-3xl bg-dark-900/60 backdrop-blur-sm border border-dark-700/50 hover:border-dark-600/50 transition-all">
-                  {/* Icon */}
-                  <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${award.color} bg-opacity-10 mb-6`}>
-                    <Icon className="w-8 h-8 text-white" />
-                  </div>
-                  
-                  {/* Prize Badge */}
-                  <div className={`inline-block px-4 py-1.5 rounded-full bg-gradient-to-r ${award.color} bg-opacity-20 backdrop-blur-sm mb-4`}>
-                    <span className="text-sm font-semibold text-white">{award.prize}</span>
+                <div className="h-full p-5 sm:p-6 md:p-8 rounded-2xl md:rounded-3xl bg-dark-900/60 backdrop-blur-sm border border-dark-700/50 hover:border-dark-600/50 transition-all">
+                  {/* Icon and Prize Badge - Top Corners */}
+                  <div className="flex justify-between items-start mb-4 md:mb-6">
+                    {/* Icon - Top Left */}
+                    <div className={`inline-flex p-2 sm:p-2.5 md:p-3 rounded-lg md:rounded-xl bg-gradient-to-br ${award.color} bg-opacity-10`}>
+                      <Icon className="w-5 h-5 md:w-6 md:h-6 text-white" />
+                    </div>
+                    
+                    {/* Prize Badge - Top Right */}
+                    <div className={`inline-block px-3 py-1 md:px-4 md:py-1.5 rounded-full bg-gradient-to-r ${award.color} bg-opacity-20 backdrop-blur-sm`}>
+                      <span className="text-xs md:text-sm font-semibold text-white">{award.prize}</span>
+                    </div>
                   </div>
                   
                   {/* Title */}
-                  <h4 className="text-2xl font-bold text-white mb-3">
+                  <h4 className="text-base sm:text-lg md:text-xl font-bold text-white mb-2 md:mb-3">
                     {award.title}
                   </h4>
                   
                   {/* Organization & Date */}
                   <div className="mb-4">
-                    <p className="text-sm text-gray-400 font-medium">{award.organization}</p>
+                    <p className="text-xs sm:text-sm text-gray-400 font-medium">{award.organization}</p>
                     <p className="text-xs text-gray-600">{award.date}</p>
                   </div>
                   
                   {/* Description */}
-                  <p className="text-gray-400 leading-relaxed">
+                  <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
                     {award.description}
                   </p>
 
@@ -165,19 +165,24 @@ const AwardsPro = () => {
                 transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
                 className="group relative"
               >
-                <div className="h-full p-6 rounded-2xl bg-dark-900/40 backdrop-blur-sm border border-dark-700/50 hover:border-dark-600/50 transition-all">
-                  {/* Icon */}
-                  <div className={`inline-flex p-3 rounded-xl bg-gradient-to-br ${award.color} bg-opacity-10 mb-4`}>
-                    <Icon className="w-5 h-5 text-white" />
+                <div className="h-full p-4 sm:p-5 md:p-6 rounded-xl md:rounded-2xl bg-dark-900/40 backdrop-blur-sm border border-dark-700/50 hover:border-dark-600/50 transition-all">
+                  {/* Icon and Prize on Top Corners */}
+                  <div className="flex justify-between items-start mb-3 md:mb-4">
+                    {/* Icon - Top Left */}
+                    <div className={`inline-flex p-2 sm:p-2.5 rounded-lg bg-gradient-to-br ${award.color} bg-opacity-10`}>
+                      <Icon className="w-4 h-4 md:w-5 md:h-5 text-white" />
+                    </div>
+                    
+                    {/* Prize Badge - Top Right */}
+                    <div className={`px-2 py-0.5 md:px-3 md:py-1 rounded-full bg-gradient-to-r ${award.color} bg-opacity-20 backdrop-blur-sm`}>
+                      <span className="text-xs font-semibold text-white">{award.prize}</span>
+                    </div>
                   </div>
                   
-                  {/* Title & Prize */}
-                  <h5 className="text-lg font-bold text-white mb-2">
+                  {/* Title */}
+                  <h5 className="text-sm sm:text-base md:text-lg font-bold text-white mb-2">
                     {award.title}
                   </h5>
-                  <p className={`text-sm font-semibold mb-3 bg-gradient-to-r ${award.color} bg-clip-text text-transparent`}>
-                    {award.prize}
-                  </p>
                   
                   {/* Organization */}
                   <p className="text-xs text-gray-500 mb-1">{award.organization}</p>
