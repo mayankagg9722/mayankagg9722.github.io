@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
-import { ArrowRight, X, Cloud, Shield, Zap, Code } from 'lucide-react';
+import { ArrowRight, X, Cloud, Shield, Zap, Code, ExternalLink } from 'lucide-react';
 
 const ProjectsPro = () => {
   const ref = useRef(null);
@@ -35,6 +35,7 @@ const ProjectsPro = () => {
       tags: ['Kubernetes', 'Docker', 'Cache', 'DevOps', 'Go'],
       icon: Zap,
       color: 'from-green-400 to-emerald-400',
+      link: 'https://gardianscale.com/',
       metrics: [
         { label: 'Speed Increase', value: '50x' },
         { label: 'Setup Time', value: '5 min' },
@@ -55,6 +56,7 @@ const ProjectsPro = () => {
       tags: ['React', 'Node.js', 'Firebase', 'PWA'],
       icon: Shield,
       color: 'from-blue-400 to-cyan-400',
+      link: 'https://bandhanpoints.tech/',
       metrics: [
         { label: 'Businesses', value: '50+' },
         { label: 'Active Users', value: '10K+' },
@@ -66,27 +68,7 @@ const ProjectsPro = () => {
         impact: 'Enabled 50+ local businesses to launch loyalty programs, reached 10K+ active users, and facilitated 25K+ reward redemptions. Built lasting customer relationships: "Rishta bhi, Rewards bhi."'
       },
       featured: true,
-    },
-    {
-      id: 3,
-      title: 'Azure Kubernetes Backup',
-      subtitle: 'Enterprise disaster recovery at scale',
-      description: 'Led the GA release of Azure Kubernetes Backup solution, enabling enterprise disaster recovery with 99.99% reliability SLA.',
-      tags: ['Azure', 'Kubernetes', 'Velero', 'Go'],
-      icon: Cloud,
-      color: 'from-purple-400 to-pink-400',
-      metrics: [
-        { label: 'RTO', value: '<15 min' },
-        { label: 'RPO', value: '<5 min' },
-        { label: 'Reliability', value: '99.99%' },
-      ],
-      details: {
-        challenge: 'Enterprise customers needed reliable backup and disaster recovery for mission-critical Kubernetes workloads with strict RTO and RPO requirements.',
-        solution: 'Designed automated backup system using Velero with custom extensions, cross-region replication, and one-click disaster recovery.',
-        impact: 'Achieved <15min RTO and <5min RPO, met compliance requirements, and enabled zero-downtime migrations for enterprise customers.'
-      },
-      featured: true,
-    },
+    }
   ];
 
   const otherProjects = [
@@ -98,6 +80,7 @@ const ProjectsPro = () => {
       tags: ['Android', 'Firebase'],
       icon: Code,
       color: 'from-orange-400 to-red-400',
+      link: 'https://github.com/mayankagg9722/VIT-Go',
       metrics: [
         { value: '35K+', label: 'Users' },
         { value: '3rd', label: 'Play Store' },
@@ -111,6 +94,7 @@ const ProjectsPro = () => {
       tags: ['Azure', 'Computer Vision'],
       icon: Zap,
       color: 'from-yellow-400 to-orange-400',
+      link: 'https://github.com/mayankagg9722/MSFTGaradge-IOTEdge-SmartGym',
       metrics: [
         { value: '1st', label: 'Prize' },
         { value: 'MSFT', label: 'Garage' },
@@ -172,7 +156,20 @@ const ProjectsPro = () => {
                             <p className="text-gray-400">{project.subtitle}</p>
                           </div>
                         </div>
-                        <ArrowRight className="w-6 h-6 text-gray-600 group-hover:text-white group-hover:translate-x-1 transition-all mt-2" />
+                        <div className="flex items-center gap-3">
+                          {project.link && (
+                            <a
+                              href={project.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={(e) => e.stopPropagation()}
+                              className="p-2 hover:bg-dark-600/50 rounded-xl transition-colors group/link"
+                            >
+                              <ExternalLink className="w-5 h-5 text-gray-400 group-hover/link:text-white" />
+                            </a>
+                          )}
+                          <ArrowRight className="w-6 h-6 text-gray-600 group-hover:text-white group-hover:translate-x-1 transition-all" />
+                        </div>
                       </div>
 
                       <p className="text-gray-300 mb-8 leading-relaxed max-w-4xl">
@@ -230,11 +227,25 @@ const ProjectsPro = () => {
                           <Icon className="w-6 h-6 text-white" />
                         </div>
                         <div className="flex-1">
-                          <h5 className="text-xl font-bold text-white mb-1">
-                            {project.title}
-                          </h5>
-                          <p className="text-sm text-gray-400 mb-2">{project.subtitle}</p>
-                          <p className="text-sm text-gray-500">{project.description}</p>
+                          <div className="flex items-start justify-between">
+                            <div className="flex-1">
+                              <h5 className="text-xl font-bold text-white mb-1">
+                                {project.title}
+                              </h5>
+                              <p className="text-sm text-gray-400 mb-2">{project.subtitle}</p>
+                              <p className="text-sm text-gray-500">{project.description}</p>
+                            </div>
+                            {project.link && (
+                              <a
+                                href={project.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="p-2 hover:bg-dark-600/50 rounded-xl transition-colors group/link flex-shrink-0"
+                              >
+                                <ExternalLink className="w-4 h-4 text-gray-400 group-hover/link:text-white" />
+                              </a>
+                            )}
+                          </div>
                         </div>
                       </div>
 
@@ -293,12 +304,24 @@ const ProjectsPro = () => {
                     </h3>
                     <p className="text-lg text-gray-400">{selectedProject.subtitle}</p>
                   </div>
-                  <button
-                    onClick={() => setSelectedProject(null)}
-                    className="p-2.5 hover:bg-dark-600/50 rounded-xl transition-colors"
-                  >
-                    <X className="w-5 h-5 text-gray-400 hover:text-white" />
-                  </button>
+                  <div className="flex items-center gap-2">
+                    {selectedProject.link && (
+                      <a
+                        href={selectedProject.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2.5 hover:bg-dark-600/50 rounded-xl transition-colors group/link"
+                      >
+                        <ExternalLink className="w-5 h-5 text-gray-400 group-hover/link:text-white" />
+                      </a>
+                    )}
+                    <button
+                      onClick={() => setSelectedProject(null)}
+                      className="p-2.5 hover:bg-dark-600/50 rounded-xl transition-colors"
+                    >
+                      <X className="w-5 h-5 text-gray-400 hover:text-white" />
+                    </button>
+                  </div>
                 </div>
 
                 <div className="space-y-8">

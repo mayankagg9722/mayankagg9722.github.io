@@ -12,6 +12,7 @@ const ExperiencePro = () => {
       period: '2025 - Present',
       focus: 'Azure Cosmos DB Resiliency',
       description: 'Working on resiliency and business continuity for Azure Cosmos DB. Securing exabytes of customer data with enterprise-grade reliability.',
+      link: 'https://azure.microsoft.com/en-in/updates?id=488905',
       achievements: [
         'Azure Cosmos DB resiliency engineering',
         'Business continuity solutions at exabyte scale',
@@ -23,9 +24,11 @@ const ExperiencePro = () => {
       period: '2021 - 2025',
       focus: 'Azure Kubernetes Backup',
       description: 'Released scalable and secure Azure Kubernetes Backup Generally Available solution. Led Azure File Share persistent volume Backup private preview.',
+      link: 'https://azure.microsoft.com/en-in/updates?id=aksbackupga',
       achievements: [
         'Led Azure Kubernetes Backup GA release',
         'Secured exabytes of customer data on AKS',
+        'Contributed to Velero (CNCF) open source project',
         'Azure File Share PV Backup private preview'
       ],
     },
@@ -34,6 +37,7 @@ const ExperiencePro = () => {
       period: '2019 - 2021',
       focus: 'Azure Data Protection Platform',
       description: 'Contributed to Azure Data Protection Platform GA. Built Managed Disk Backup service and Azure Portal UIs with A11Y compliance.',
+      link: 'https://azure.microsoft.com/en-in/updates?id=azure-disk-backup-ga',
       achievements: [
         'Azure Data Protection Platform GA',
         'Built Managed Disk Backup microservice',
@@ -129,7 +133,18 @@ const ExperiencePro = () => {
                       <div className="flex items-start justify-between mb-3 flex-wrap gap-2">
                         <div>
                           <h4 className="text-xl md:text-2xl font-bold text-white mb-1">
-                            {role.title}
+                            {role.link ? (
+                              <a 
+                                href={role.link} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="hover:text-blue-400 transition-colors"
+                              >
+                                {role.title}
+                              </a>
+                            ) : (
+                              role.title
+                            )}
                           </h4>
                           <p className="text-blue-400 font-medium">{role.focus}</p>
                         </div>

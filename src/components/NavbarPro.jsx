@@ -96,7 +96,7 @@ const NavbarPro = () => {
               );
             })}
             
-            {/* Resume Button */}
+            {/* Contact Button */}
             <motion.a
               href="#contact"
               onClick={(e) => handleLinkClick(e, '#contact')}

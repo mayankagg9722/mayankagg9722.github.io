@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import { ArrowRight, Sparkles, Award, Briefcase, Smartphone } from 'lucide-react';
+import { ArrowRight, Sparkles, Award, Briefcase, Smartphone, Download } from 'lucide-react';
 
 const HeroPro = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -167,12 +167,15 @@ const HeroPro = () => {
             className="flex flex-wrap gap-5 justify-center"
           >
             <motion.button
-              onClick={scrollToContact}
+              onClick={() => {
+                const element = document.querySelector('#projects');
+                if (element) element.scrollIntoView({ behavior: 'smooth' });
+              }}
               whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(255,255,255,0.1)" }}
               whileTap={{ scale: 0.95 }}
               className="group relative px-8 py-4 bg-white text-black rounded-full font-semibold text-lg flex items-center gap-2 overflow-hidden shadow-xl"
             >
-              <span className="relative z-10">Let's talk</span>
+              <span className="relative z-10">View work</span>
               <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
               <motion.div
                 className="absolute inset-0 bg-gradient-to-r from-gray-100 to-white"
@@ -182,26 +185,25 @@ const HeroPro = () => {
               />
             </motion.button>
             
-            <motion.button
-              onClick={() => {
-                const element = document.querySelector('#projects');
-                if (element) element.scrollIntoView({ behavior: 'smooth' });
-              }}
+            <motion.a
+              href="/resume/resume_2025.pdf"
+              download="Mayank_Aggarwal_Resume_2025.pdf"
               whileHover={{ 
                 scale: 1.05,
                 borderColor: "rgba(255,255,255,0.3)",
               }}
               whileTap={{ scale: 0.95 }}
-              className="relative px-8 py-4 bg-dark-800/40 backdrop-blur-sm text-white rounded-full font-semibold text-lg border border-dark-600/50 hover:bg-dark-700/60 transition-all shadow-lg overflow-hidden group"
+              className="relative px-8 py-4 bg-dark-800/40 backdrop-blur-sm text-white rounded-full font-semibold text-lg border border-dark-600/50 hover:bg-dark-700/60 transition-all shadow-lg overflow-hidden group flex items-center gap-2"
             >
-              <span className="relative z-10">View work</span>
+              <Download className="w-5 h-5 relative z-10" />
+              <span className="relative z-10">Resume</span>
               <motion.div
                 className="absolute inset-0 bg-gradient-to-r from-dark-700/50 to-dark-600/50"
                 initial={{ x: "-100%" }}
                 whileHover={{ x: 0 }}
                 transition={{ duration: 0.3 }}
               />
-            </motion.button>
+            </motion.a>
           </motion.div>
         </motion.div>
       </div>
