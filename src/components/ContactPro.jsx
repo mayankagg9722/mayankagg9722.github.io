@@ -10,7 +10,7 @@ const ContactPro = () => {
     {
       icon: Github,
       label: 'GitHub',
-      value: 'View my code',
+      value: '',
       href: 'https://github.com/mayankagg9722',
       gradient: 'from-purple-500/20 to-pink-500/20',
       iconBg: 'bg-purple-500/20',
@@ -20,7 +20,7 @@ const ContactPro = () => {
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      value: 'Connect on LinkedIn',
+      value: '',
       href: 'https://www.linkedin.com/in/mayankagg9722/',
       gradient: 'from-blue-500/20 to-cyan-500/20',
       iconBg: 'bg-blue-500/20',
@@ -30,7 +30,7 @@ const ContactPro = () => {
     {
       icon: Calendar,
       label: 'Topmate',
-      value: '1:1 Sessions',
+      value: '',
       href: 'https://topmate.io/mayankagg9722',
       gradient: 'from-emerald-500/20 to-teal-500/20',
       iconBg: 'bg-emerald-500/20',

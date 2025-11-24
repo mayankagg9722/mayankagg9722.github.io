@@ -32,7 +32,6 @@ const NavbarPro = () => {
     { name: 'Experience', href: '#experience' },
     { name: 'Work', href: '#projects' },
     { name: 'Awards', href: '#awards' },
-    { name: 'Get in touch', href: '#contact' },
   ];
 
   const handleLinkClick = (e, href) => {
