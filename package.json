@@ -9,7 +9,8 @@
     "build": "vite build",
     "resume": "powershell -ExecutionPolicy Bypass -File ./resume/build-resume.ps1",
     "preview": "vite preview",
-    "deploy": "npm run resume && npm run build && gh-pages -d dist"
+    "predeploy": "npm run resume  && npm run build",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "@react-three/drei": "^9.88.0",

@@ -16,7 +16,7 @@ const FooterPro = () => {
     { name: 'GitHub', href: 'https://github.com/mayankagg9722', icon: Github },
     { name: 'LinkedIn', href: 'https://www.linkedin.com/in/mayankagg9722/', icon: Linkedin },
     { name: 'Twitter', href: 'https://twitter.com/Mayank9722', icon: Twitter },
-    { name: 'Youtube', href: 'https://www.youtube.com/channel/UC1r6h3Tq_IDreen0_FdlmYg', icon: Youtube },
+    { name: 'Youtube', href: 'https://www.youtube.com/@_theopeners_', icon: Youtube },
   ];
 
   const handleClick = (e, href) => {
