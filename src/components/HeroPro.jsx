@@ -186,7 +186,7 @@ const HeroPro = () => {
             </motion.button>
             
             <motion.a
-              href="/resume/resume_2025.pdf"
+              href="/resume_2025.pdf"
               download="Mayank_Aggarwal_Resume_2025.pdf"
               whileHover={{ 
                 scale: 1.05,

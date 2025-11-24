@@ -76,6 +76,25 @@ foreach ($RESUME_FILE in $RESUME_FILES) {
         Remove-Item -ErrorAction SilentlyContinue "$RESUME_NAME.fls"
         
         Write-Host "Cleanup complete!" -ForegroundColor Green
+        
+        # Copy to public folder for deployment
+        $publicDir = Join-Path (Split-Path -Parent $RESUME_DIR) "public"
+        $publicResume = Join-Path $publicDir "$RESUME_NAME.pdf"
+        
+        if (Test-Path $publicDir) {
+            # Remove old version if exists
+            if (Test-Path $publicResume) {
+                Remove-Item $publicResume -Force
+                Write-Host "Removed old resume from public folder" -ForegroundColor Yellow
+            }
+            
+            # Copy new version
+            Copy-Item "$RESUME_NAME.pdf" $publicResume
+            Write-Host "Copied $RESUME_NAME.pdf to public folder" -ForegroundColor Green
+        } else {
+            Write-Host "Warning: public folder not found, skipping copy" -ForegroundColor Yellow
+        }
+        
         $successCount++
     } else {
         Write-Host "Error: PDF file was not generated for $RESUME_FILE!" -ForegroundColor Red
