@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="min-h-screen bg-dark-900">
       <NavbarPro />
-      <main>
+      <main role="main" aria-label="Main content">
         <HeroPro />
         <AboutPro />
         <ExperiencePro />

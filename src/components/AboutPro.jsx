@@ -71,8 +71,11 @@ const AboutPro = () => {
                 {/* Photo */}
                 <img 
                   src="/photo.jpg" 
-                  alt="Mayank Aggarwal"
+                  alt="Mayank Aggarwal - Senior Software Engineer at Microsoft specializing in Azure, Kubernetes and Cloud Infrastructure"
                   className="w-full h-full object-cover"
+                  loading="eager"
+                  width="320"
+                  height="320"
                   style={{
                     filter: 'brightness(0.9) contrast(1.1) saturate(0.95)',
                   }}
