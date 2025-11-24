@@ -40,7 +40,7 @@ const ContactPro = () => {
   ];
 
   return (
-    <section id="contact" ref={ref} className="py-24 relative overflow-hidden bg-dark-900">
+    <section id="contact" ref={ref} className="py-16 md:py-20 relative overflow-hidden bg-dark-900">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{

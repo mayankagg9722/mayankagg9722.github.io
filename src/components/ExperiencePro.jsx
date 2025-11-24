@@ -59,7 +59,7 @@ const ExperiencePro = () => {
   };
 
   return (
-    <section id="experience" ref={ref} className="pt-12 pb-24 bg-dark-900 relative overflow-hidden">
+    <section id="experience" ref={ref} className="py-16 md:py-20 bg-dark-900 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{

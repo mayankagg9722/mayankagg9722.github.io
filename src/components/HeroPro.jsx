@@ -49,7 +49,7 @@ const HeroPro = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden py-20">
+    <section id="home" className="min-h-[85vh] md:min-h-screen flex items-center justify-center relative overflow-hidden py-8 md:py-12">
       {/* Enhanced gradient background with radial effect */}
       <div className="absolute inset-0 bg-gradient-to-br from-dark-800 via-dark-900 to-black" />
       

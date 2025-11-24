@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 const NavbarPro = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,6 +41,7 @@ const NavbarPro = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+    setIsMobileMenuOpen(false); // Close mobile menu after clicking
   };
 
   return (
@@ -112,14 +114,76 @@ const NavbarPro = () => {
           <div className="md:hidden">
             <motion.button
               whileTap={{ scale: 0.95 }}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="text-white p-2"
+              aria-label="Toggle menu"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
+              {isMobileMenuOpen ? (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
             </motion.button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            className="md:hidden absolute top-full left-0 right-0 bg-dark-900 backdrop-blur-2xl border-t border-dark-700/30 shadow-2xl"
+          >
+            <div className="px-8 py-8 space-y-1">
+              {navLinks.map((link, index) => {
+                const sectionId = link.href.replace('#', '');
+                const isActive = activeSection === sectionId;
+                
+                return (
+                  <motion.a
+                    key={link.name}
+                    href={link.href}
+                    onClick={(e) => handleLinkClick(e, link.href)}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    className={`group flex items-center gap-3 px-5 py-4 text-xl font-bold rounded-2xl transition-all duration-300 ${
+                      isActive 
+                        ? 'text-white bg-gradient-to-r from-blue-500/20 to-purple-500/20 shadow-lg shadow-blue-500/5' 
+                        : 'text-gray-400 hover:text-white hover:bg-dark-800/80 hover:translate-x-1'
+                    }`}
+                  >
+                    {isActive && (
+                      <span className="w-1.5 h-8 bg-gradient-to-b from-blue-400 to-purple-500 rounded-full"></span>
+                    )}
+                    {!isActive && (
+                      <span className="w-1.5 h-8 bg-transparent group-hover:bg-gradient-to-b group-hover:from-blue-400/50 group-hover:to-purple-500/50 rounded-full transition-all"></span>
+                    )}
+                    <span>{link.name}</span>
+                  </motion.a>
+                );
+              })}
+              
+              {/* Mobile Contact Button */}
+              <motion.a
+                href="#contact"
+                onClick={(e) => handleLinkClick(e, '#contact')}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: navLinks.length * 0.1 }}
+                className="block w-full mt-6 px-6 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-2xl text-center text-lg font-bold hover:shadow-lg hover:shadow-purple-500/25 transition-all hover:scale-[1.02] active:scale-[0.98]"
+              >
+                Get in touch
+              </motion.a>
+            </div>
+          </motion.div>
+        )}
       </div>
     </motion.nav>
   );

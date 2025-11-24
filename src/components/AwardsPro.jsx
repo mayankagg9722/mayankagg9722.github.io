@@ -79,7 +79,7 @@ const AwardsPro = () => {
   const otherAwards = awards.filter(a => !a.highlight);
 
   return (
-    <section id="awards" ref={ref} className="py-24 bg-dark-800 relative overflow-hidden">
+    <section id="awards" ref={ref} className="py-16 md:py-20 bg-dark-800 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
