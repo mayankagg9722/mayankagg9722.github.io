@@ -1,0 +1,255 @@
+%-------------------------
+% Resume in Latex
+% Author: Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License: MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.982\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    {\Huge \scshape Mayank Aggarwal} \\ \vspace{1pt}
+    % 123 Street Name, Town, State 12345 \\ 
+    \vspace{1pt}
+    \small \raisebox{-0.1\height}\faPhone\ +91-8860729957 ~ \href{mailto:mayankagg9722@gmail.com}{\faEnvelope\  mayankagg9722@gmail.com} ~ 
+    \href{https://in.linkedin.com/in/mayankagg9722}{\faLinkedin \ in/mayankagg9722}  ~
+    \href{https://github.com/mayankagg9722}{\faGithub\ mayankagg9722}
+    \vspace{-8pt}
+\end{center}
+
+%-----------EDUCATION-----------
+   \section{EDUCATION}
+  \resumeSubHeadingListStart
+    % \small{
+    \resumeSubheading
+      {Vellore Institute of Technology, Vellore}{May 2015 -- May 2019}
+      {Bachelor of Technology in Computer Science}{CGPA: 8.50}
+    \resumeSubheading
+      {Vivekanand School, Delhi}{March 2015}
+      {Class: XII(CBSE)}{Score: 91.50\%}
+    \resumeSubheading
+      {Vivekanand School, Delhi}{March 2013}
+      {Class: X(CBSE)}{CGPA: 10}
+      % }
+  \resumeSubHeadingListEnd
+  
+% %-----------EXPERIENCE-----------
+ \section{EXPERIENCE}
+   \resumeSubHeadingListStart
+    % \small{
+    \resumeSubheading
+       {Microsoft, Azure}{Sept. 2021 - Present}
+       {Software Development Engineer 2}{Hyderabad, India}
+       \resumeItemListStart
+         \resumeItem{Led \href{https://learn.microsoft.com/en-us/azure/backup/backup-overview}{\underline{Azure BCDR}} engineering team for AKS in designing and delivering enterprise grade GA (General Available) Data Protection solution for \href{https://learn.microsoft.com/en-us/azure/backup/azure-kubernetes-service-backup-overview}{\bf \underline{Azure Kubernetes Service}} ensuring robust backup and disaster recovery capabilities for critical workloads.}
+         \resumeItem{Onboarded Fortune 500 enterprise customers and supported more than a \textbf{million} backups with SLA of \textbf{99.99} for backup and restore with SLA of \textbf{100}.}
+         \resumeItem{Presented the Azure AKS BCDR solution in \textbf{KubeCon Europe Paris} 2024 engaging with over \textbf{15000} attendees all across the globe which was hosted by \textbf{Linux Foundation}.}
+       \resumeItemListEnd
+
+     \resumeSubheading
+       {Microsoft, Azure}{June 2019 -- Sept. 2021}
+       {Software Development Engineer 1}{Hyderabad, India}
+       \resumeItemListStart
+         \resumeItem{Built out the abstraction in the control plane, delivering the highly distributed and scalable \href{https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-overview}{\bf \underline {Service Fabric}} microservice from the ground up. Led the development of the core \textbf{Workflow State Machine}, enabling seamless integration of workload plugins such as Azure Disk and AKS for long-running backup and restore workflows.}
+         \resumeItem{Led and mentored interns on the integration of \href{https://azure.microsoft.com/en-in/services/cache/}{\bf \underline{Distributed Redis cache}} in the management plane to optimize performance, resulting in significant latency reduction by 30\%.}
+         \resumeItem{Implemented and delivered the foundational  \href{https://learn.microsoft.com/en-us/azure/backup/create-manage-backup-vault\#move-a-backup-vault-across-azure-subscriptionsresource-groups}{\bf \underline{Resource Move}} capability for Azure BCDR, enabling customers to efficiently migrate Azure resources at scale across subscriptions and tenants during large-scale migrations.}
+         \resumeItem{Developed a manifest-driven, dynamic user interface feature for the Azure BCDR Portal using TypeScript, enabling scalable UI architecture and seamless onboarding of multiple workloads without requiring code changes.}
+         \resumeItem{Worked for onboarding \href{https://docs.microsoft.com/en-us/azure/backup/backup-vault-overview}{\bf \underline{backup vault service}} to secure government Azure cloud for China and United States.}
+       \resumeItemListEnd
+
+    % \resumeSubheading
+    %    {Microsoft}{May to July 2018 -- Jan to June, 2019}
+    %    {Software Engineer Intern}{Hyderabad, India}
+    %    \resumeItemListStart
+    %      \resumeItem{Designed and implemented migration from V1 to V2 user interfaces for the \href{https://azure.microsoft.com/en-in/products/devops/?msockid=215053d7170b6d8f2545474d16f96cfb}{\bf \underline{Azure DevOps}} self-service extension, ensuring compliance to meet accessibility standards for Azure interfaces. It includes \href{https://developer.mozilla.org/en-US/docs/Web/Accessibility}{\bf \underline A11Y, WCAG 2.1} and tools like Narrator, JAWS, and NVDA so that \textbf{specially-abled} person can access user interfaces. Also enhanced UX by developing the search and auto-complete functionality which enabled direct navigation to any level in the services tree hierarchy.}
+    %      \resumeItem{Able to secure full time job offer post internship in 2018 (3rd year) during college with this internship among more than 100 intern candidates from across India.}
+    %    \resumeItemListEnd
+
+    % \resumeSubheading
+    %    {Dipper Technologies Pvt. Ltd.}{Dec 2017 – Jan 2018}
+    %    {Android Developer Intern}{New Delhi, India}
+    %    \resumeItemListStart
+    %     \resumeItem{Responsible for designing core intelligent delivery progressive web application using \textbf{Angular 2} for \href{https://www.youtube.com/watch?v=D-unLCisymE}{\bf \underline{truckers}} and \href{https://www.youtube.com/watch?v=W6yJtqacrLA}{\bf \underline{shippers}} Android or iOS mobile users.}
+    %    \resumeItemListEnd
+    % }
+   \resumeSubHeadingListEnd
+ \vspace{-16pt}
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{SKILLS}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+    % \textbf{Areas of Interest}{: Competitive Programming, Web Development, Blockchain } \\
+     \textbf{Languages}{: C++, C\#, Golang, .NET, Java, Python, Flask, NodeJS, Bash} \\
+     \textbf{Cloud, Infrastructure}{: Azure, Kubernetes, Docker, AWS} \\
+      \textbf{Databases}{: SQL, MongoDB, Azure Table, Blob, Fileshares, Firebase} \\
+     \textbf{Mobile and Web}{: Android, ReactJS, ExpressJS, AngularJS, HTML5/CSS3, Typescript, JavaScript, JQuery, Bootstrap} \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+%-----------PROJECTS-----------
+\section{PROJECTS}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+    % \small{
+    \resumeProjectHeading
+          {\textbf{VIT GO | Android Application }}{ {\href{https://github.com/mayankagg9722/VIT-Go}{\underline {\normalsize Project Link}}}}
+          \resumeItemListStart
+            \resumeItem{Developed high traffic Android App  with over \textbf{33K} users with over \textbf{100K impressions} per day which aims to bring every academic details on their fingertips. It displays all the academic information for students and with a lot of customize features. This app also \textbf{ranked 3\textsuperscript{rd}} in productivity category in India on Google Play Store.}
+          \resumeItemListEnd
+          \vspace{-19pt}
+      \resumeProjectHeading
+          {\textbf{EDGE.FIT | AI Gym Trainer}}{\href{https://github.com/mayankagg9722/MSFTGaradge-IOTEdge-SmartGym}{\bf \underline{Project Link}}}
+          \resumeItemListStart
+            \resumeItem{It is a virtual personal fitness trainer which uses {\bf Computer vision}, and Intelligent Edge and Cloud computing to help users achieve their fitness goals efficiently.}
+          \resumeItemListEnd
+          \vspace{-19pt}
+        \resumeProjectHeading
+          {\textbf{Smart Kitchen | IOT \& Android}}{\href{https://www.youtube.com/watch?v=-lvMWbboeeE}{\bf \underline{Project Link}}}
+          \resumeItemListStart
+            \resumeItem{This project built using {\bf IoT hardware tool Raspberry-Pi and NLP voice conversion API along with Android integration}. The purpose is to ease the process of cooking in the kitchen with help of technology. It helps in sorting out the ingredients in the kitchen and getting recipes through voice commands.}
+          \resumeItemListEnd
+          \vspace{7pt}
+          % }
+    \resumeSubHeadingListEnd
+\vspace{-16pt}
+
+%-----------ACHIEVEMENTS-----------
+\section{ACHIEVEMENTS}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Microsoft Garage Hackathon: }\emph{1\textsuperscript{st}/85 teams. }{\href{https://youtu.be/0-dl__J98mo}{\underline {Link}}} \\
+     \textbf{NASA SpaceAppChallange'17: }\emph{18\textsuperscript{th}/105 globally in world. }{\href{https://2017.spaceappschallenge.org/challenges/planetary-blues/wheres-water/teams/team-go}{\underline {Link}}} \\
+     \textbf{Apple Developers Group, App-A-Thon'17: }\emph{2\textsuperscript{nd}/100 teams. } {\href{https://www.youtube.com/watch?v=jBxkavGlVPU}{\underline {Link}}} \\
+     \textbf{Google Developers Hackathon - Devfest'16: }\emph{Platinum Prize Winners. } {\href{https://github.com/mayankagg9722/miBeatChat}{\underline {Link}}} \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+ %-----------ACHIEVEMENTS-----------
+\section{SOCIETIES}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Google Developer Group, Team Sammard, Creation Labs, IEEE-CS }{}\\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+ \end{document}
