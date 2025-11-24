@@ -111,33 +111,53 @@ const HeroPro = () => {
           className="max-w-6xl mx-auto text-center"
         >
           {/* Introduction */}
-          <motion.div variants={itemVariants} className="mb-10">
-            <p className="text-xl sm:text-2xl md:text-3xl text-gray-400 font-light">
+          <motion.div variants={itemVariants} className="mb-6">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-500 font-light tracking-wide">
               Hi, I'm{' '}
-              <span className="text-white font-bold text-2xl sm:text-3xl md:text-4xl">Mayank Aggarwal</span>
+              <span className="relative inline-block">
+                <span className="relative z-10 bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+                  Mayank Aggarwal
+                </span>
+                <motion.span
+                  className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 via-purple-400 to-purple-500"
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: 1 }}
+                  transition={{ delay: 0.8, duration: 0.8, ease: "easeOut" }}
+                />
+              </span>
             </p>
           </motion.div>
 
           {/* Main headline with enhanced typography */}
           <motion.h1
             variants={itemVariants}
-            className="font-bold leading-[1.15] mb-8 tracking-tight"
+            className="font-bold leading-[1.1] mb-6 tracking-tight"
           >
-            <span className="block text-white mb-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">Building Reliable Systems</span>
-            <span className="block bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent text-xl sm:text-2xl md:text-3xl lg:text-4xl">
-              Delivering Real Impact
+            <span className="block text-white mb-3 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+              Building Reliable Systems
+            </span>
+            <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+              <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-purple-500 bg-clip-text text-transparent font-extrabold">
+                Delivering Real Impact
+              </span>
             </span>
           </motion.h1>
 
           {/* Enhanced subheading */}
           <motion.p
             variants={itemVariants}
-            className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-12 max-w-4xl mx-auto leading-relaxed font-light"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-400 mb-14 max-w-4xl mx-auto leading-relaxed font-light"
           >
             Full-stack engineer architecting{' '}
-            <span className="text-white font-medium">scalable cloud systems</span>{' '}
+            <span className="text-white font-semibold relative inline-block group">
+              scalable cloud systems
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400/50 to-purple-500/50 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+            </span>{' '}
             and{' '}
-            <span className="text-white font-medium">modern web experiences</span>{' '}
+            <span className="text-white font-semibold relative inline-block group">
+              modern web experiences
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400/50 to-purple-500/50 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+            </span>{' '}
             that drive innovation.
           </motion.p>
 

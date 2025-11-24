@@ -1,12 +1,30 @@
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#818cf8;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#a78bfa;stop-opacity:1" />
+    <linearGradient id="favCodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
     </linearGradient>
   </defs>
-  <circle cx="16" cy="16" r="15" fill="#0f172a" stroke="url(#grad2)" stroke-width="1"/>
-  <path d="M9 21V11L13 16L16 12L19 16L23 11V21H21V15L18 19L16 16L14 19L11 15V21H9Z" fill="url(#grad2)"/>
-  <line x1="17" y1="20" x2="23" y2="20" stroke="url(#grad2)" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+  
+  <!-- Background -->
+  <rect width="32" height="32" rx="4" fill="#0a0a0a"/>
+  
+  <!-- Terminal header -->
+  <rect width="32" height="4" rx="4" fill="#1a1a1a"/>
+  <circle cx="3" cy="2" r="0.7" fill="#ef4444" opacity="0.8"/>
+  <circle cx="6" cy="2" r="0.7" fill="#f59e0b" opacity="0.8"/>
+  <circle cx="9" cy="2" r="0.7" fill="#10b981" opacity="0.8"/>
+  
+  <!-- Code brackets -->
+  <path d="M7 10 L6 10 L6 22 L7 22" 
+        stroke="url(#favCodeGrad)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  
+  <!-- MA text -->
+  <text x="10" y="19" font-family="'Courier New', monospace" font-size="12" font-weight="bold" fill="url(#favCodeGrad)">MA</text>
+  
+  <path d="M25 10 L26 10 L26 22 L25 22" 
+        stroke="url(#favCodeGrad)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  
+  <!-- Cursor -->
+  <rect x="22" y="17" width="1.5" height="2" fill="#8b5cf6" opacity="0.8"/>
 </svg>
