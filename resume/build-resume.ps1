@@ -64,7 +64,7 @@ foreach ($RESUME_FILE in $RESUME_FILES) {
     if (Test-Path "$RESUME_NAME.pdf") {
         $pdfSize = (Get-Item "$RESUME_NAME.pdf").Length
         Write-Host ""
-        Write-Host "✓ Success! PDF generated: $RESUME_NAME.pdf ($pdfSize bytes)" -ForegroundColor Green
+        Write-Host "Success! PDF generated: $RESUME_NAME.pdf ($pdfSize bytes)" -ForegroundColor Green
         
         # Clean up auxiliary files
         Write-Host "Cleaning up auxiliary files..." -ForegroundColor Yellow
@@ -75,7 +75,7 @@ foreach ($RESUME_FILE in $RESUME_FILES) {
         Remove-Item -ErrorAction SilentlyContinue "$RESUME_NAME.fdb_latexmk"
         Remove-Item -ErrorAction SilentlyContinue "$RESUME_NAME.fls"
         
-        Write-Host "✓ Cleanup complete!" -ForegroundColor Green
+        Write-Host "Cleanup complete!" -ForegroundColor Green
         $successCount++
     } else {
         Write-Host "Error: PDF file was not generated for $RESUME_FILE!" -ForegroundColor Red
