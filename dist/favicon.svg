@@ -16,15 +16,20 @@
   <circle cx="9" cy="2" r="0.7" fill="#10b981" opacity="0.8"/>
   
   <!-- Code brackets -->
-  <path d="M7 10 L6 10 L6 22 L7 22" 
+  <path d="M8 10 L7 10 L7 22 L8 22" 
         stroke="url(#favCodeGrad)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
   
-  <!-- MA text -->
-  <text x="10" y="19" font-family="'Courier New', monospace" font-size="12" font-weight="bold" fill="url(#favCodeGrad)">MA</text>
+  <!-- MA text centered -->
+  <text x="16" y="19" 
+        font-family="'Courier New', monospace" 
+        font-size="12" 
+        font-weight="bold" 
+        text-anchor="middle"
+        fill="url(#favCodeGrad)">MA</text>
   
-  <path d="M25 10 L26 10 L26 22 L25 22" 
+  <path d="M24 10 L25 10 L25 22 L24 22" 
         stroke="url(#favCodeGrad)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
   
   <!-- Cursor -->
-  <rect x="22" y="17" width="1.5" height="2" fill="#8b5cf6" opacity="0.8"/>
+  <rect x="21" y="17" width="1.5" height="2" fill="#8b5cf6" opacity="0.8"/>
 </svg>
