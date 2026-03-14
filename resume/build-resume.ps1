@@ -3,18 +3,22 @@
 
 param(
     [Parameter(Position=0)]
-    [ValidateSet("2024", "2025", "all")]
-    [string]$Version = "2025"
+    [ValidateSet("2024", "2025", "2026", "all")]
+    [string]$Version = "2026"
 )
 
-# Configuration
-$MIKTEX_BIN = "C:\Program Files\MiKTeX\miktex\bin\x64"
+# Configuration - check user-level install first, then system-level
+$MIKTEX_BIN = if (Test-Path "$env:LOCALAPPDATA\Programs\MiKTeX\miktex\bin\x64") {
+    "$env:LOCALAPPDATA\Programs\MiKTeX\miktex\bin\x64"
+} else {
+    "C:\Program Files\MiKTeX\miktex\bin\x64"
+}
 $RESUME_DIR = Split-Path -Parent $MyInvocation.MyCommand.Path
 
 # Determine which files to build
 $RESUME_FILES = @()
 if ($Version -eq "all") {
-    $RESUME_FILES = @("resume_2024.tex", "resume_2025.tex")
+    $RESUME_FILES = @("resume_2024.tex", "resume_2025.tex", "resume_2026.tex")
 } else {
     $RESUME_FILES = @("resume_$Version.tex")
 }

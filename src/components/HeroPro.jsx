@@ -186,8 +186,8 @@ const HeroPro = () => {
             </motion.button>
             
             <motion.a
-              href="/resume_2025.pdf"
-              download="Mayank_Aggarwal_Resume_2025.pdf"
+              href="/resume_2026.pdf"
+              download="Mayank_Aggarwal_Resume_2026.pdf"
               whileHover={{ 
                 scale: 1.05,
                 borderColor: "rgba(255,255,255,0.3)",
